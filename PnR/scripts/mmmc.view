@@ -26,7 +26,7 @@ create_library_set -name max_timing -timing {\
 #===============================================================
 # Constraint Mode Definition
 #===============================================================
-create_constraint_mode -name constraints -sdc_files "$netlist_dir/genus_counter.sdc"
+create_constraint_mode -name constraints -sdc_files "$netlist_dir/genus_mult_unsigned.sdc"
 
 #===============================================================
 # Delay Corner Definitions

@@ -1,0 +1,3 @@
+auCdlCDFPinCntrl = 't
+auCdlEnableNetlistInclusion = 't
+simPrintInhConnAttributes = 't

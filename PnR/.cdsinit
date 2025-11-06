@@ -1,0 +1,121 @@
+/* Cadence IC6/GPDK45 Project Customization file
+   Cadence GPDK45NM  
+   PROC : 45nm mixed-signal
+   MIMCAP : 
+   METAL : 
+   Directory : GPDK45
+
+   Prepared by Feng Liu, CMC Microsystems
+   Date : Aug. 29, 2018
+*/
+
+;# 2020may05 FQL, PDK v6.0 installed
+;# 2020may05 FQL, PDK eda component installed 
+;# 2020may05 FQL, IO lib v3.3 installed
+;# 2020sep23 FQL, revised using new env variable syntax
+
+printf("// \n")
+printf("// \n")
+printf("//          The Cadence GPDK045 \n")
+printf("//          45nm CMOS 11M/2P Generic PDK \n")
+printf("//            gpdk045   v6.0: The Virtuoso technology library \n")
+printf("//            gsclib045 v4.4: The multi-Vt standard cell library set \n")
+printf("//            giolib045 v3.3: The IO and bondpad cells library \n")
+printf("// \n")
+printf("// \n")
+
+; EAD
+;envSetVal("layoutEAD" "useSetup" 'string "./.cadence/dfII/EAD/1/setup/gpdk045_setup.ini")
+;envSetVal("layoutEAD.gui" "detailedParasiticTables" 'boolean t)
+;envSetVal( "layoutEAD" "resistancePathLimit" 'int 10000)
+
+; Controls pin snapping
+;envSetVal("layoutXL" 	"snapToGrid" 		'boolean t)
+;envSetVal("layoutXL" 	"snapToBoundary" 	'boolean t)
+
+; ADE
+envSetVal("asimenv" "saveAsCellview" 'boolean t)
+envSetVal("asimenv" "saveDir" 'string "./.artist_states")
+envSetVal("asimenv.startup" "projectDir" 'string  "./simulation")
+envSetVal("textedit" "useExternalEditor" 'boolean t)
+
+; SCHEMATICS
+envSetVal("schematic" "netNameMethod" 'cyclic "derived")
+
+; PVS
+;envSetVal("msps.layout" "lvsRulesFile" 'string strcat(getShellEnvVar("CMC_TECH") "/gpdk045_v_6_0/pvs/pvlLVS.rul"))
+;envSetVal("msps.layout" "layerMapFile" 'string strcat(getShellEnvVar("CMC_TECH") "/gpdk045_v_6_0/gpdk045/gpdk045.layermap"))
+
+; Display controls
+envSetVal("layout"	"drawGridOn"			'boolean	nil)
+envSetVal("layout"	"displayPinNames"		'boolean	t)
+envSetVal("layout"	"displayPRHighestResolution"	'boolean	t)
+envSetVal("layout"	"displayResolution"		'string		"Very High")
+
+; SPECTRE
+;envSetVal("spectre.envOpts" "modelFiles" 'string "$CMC_TECH/gpdk045_v_6_0/models/spectre/gpdk045.scs")
+;envSetVal("asimenv.plotting" "useDisplayDrf" 'boolean nil)
+;envSetVal("hed.ade" "setAmsSimulator" 'boolean nil)
+;#ncsu model setup
+
+;################################################
+;#
+;# SETTINGS FOR SKILL PATH and SKILL PROGRAMMING
+;#
+;################################################
+
+sstatus(writeProtect nil)
+
+let((skillPath)
+   skillPath= strcat(
+   ". ~ "                                          
+   prependInstallPath("samples/techfile ")         
+   )
+   setSkillPath(skillPath)
+)
+printf("END OF SKILL CUSTOMIZATION\n")
+
+;################################################
+;#                                           
+;# LOAD APPLICATION BIND KEY DEFINITIONS
+;#
+;################################################
+
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+                     "leBindKeys.il" 
+                     "schBindKeys.il"
+                       )
+        
+            path = strcat(
+                      ".   ~   "
+                      prependInstallPath("local ")
+                      prependInstallPath("samples/local")
+                      )
+            saveSkillPath=getSkillPath()
+            setSkillPath(path)
+                     
+            foreach(file bindKeyFileList
+                if(isFile(file) then
+                   loadi(file)
+                  )
+            )
+                      
+            setSkillPath(saveSkillPath)
+)
+printf("END OF Cadence BINDKEY CUSTOMIZATION\n")
+
+;################################################
+;#
+;# MISCELLANEOUS
+;#
+;################################################
+
+hiSetFilterOptions(t t t t t t t)
+hiFormApply( hiSysProps )
+
+printf("END OF USER CUSTOMIZATION\n")
+;
+;END OF USER CUSTOMIZATION
+
+
