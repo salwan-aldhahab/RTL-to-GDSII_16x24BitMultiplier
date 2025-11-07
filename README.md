@@ -175,6 +175,7 @@ module mult_unsigned (clk, A, B, RES);
   reg [WIDTHA-1:0] rA;
   reg [WIDTHB-1:0] rB;
   reg [WIDTHA+WIDTHB-1:0] M [3:0];
+  integer i;
   
   // Pipeline implementation
   always @(posedge clk) begin
@@ -218,7 +219,7 @@ Detailed reports are available in:
 ## Technology and Tools
 
 | Component | Tool/Technology |
-|-----------|----------------|
+|-----------|-----------------|
 | RTL Simulation | Cadence Xcelium |
 | Logic Synthesis | Cadence Genus |
 | Place & Route | Cadence Innovus |
