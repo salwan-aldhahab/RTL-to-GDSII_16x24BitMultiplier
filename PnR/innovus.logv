@@ -1,0 +1,86 @@
+[11/06 16:52:06      0s] 
+[11/06 16:52:06      0s] Cadence Innovus(TM) Implementation System.
+[11/06 16:52:06      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/06 16:52:06      0s] 
+[11/06 16:52:06      0s] Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+[11/06 16:52:06      0s] Options:	
+[11/06 16:52:06      0s] Date:		Thu Nov  6 16:52:06 2025
+[11/06 16:52:06      0s] Host:		ruby (x86_64 w/Linux 4.18.0-553.66.1.el8_10.x86_64) (12cores*48cpus*Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz 30720KB)
+[11/06 16:52:06      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[11/06 16:52:06      0s] 
+[11/06 16:52:06      0s] License:
+[11/06 16:52:06      0s] 		[16:52:06.435618] Configured Lic search path (21.01-s002): 6055@cmclicense.eecs.yorku.ca:7055@cmclicense.eecs.yorku.ca
+
+[11/06 16:52:06      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[11/06 16:52:06      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/06 16:52:22     13s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+[11/06 16:52:25     16s] @(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+[11/06 16:52:25     16s] @(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+[11/06 16:52:25     16s] @(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+[11/06 16:52:25     16s] @(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+[11/06 16:52:25     16s] @(#)CDS: CPE v21.17-s068
+[11/06 16:52:25     16s] @(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+[11/06 16:52:25     16s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[11/06 16:52:25     16s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[11/06 16:52:25     16s] @(#)CDS: RCDB 11.15.0
+[11/06 16:52:25     16s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[11/06 16:52:25     16s] @(#)CDS: SystemPlanner-21.17Rel-10251 (21.17) (2023-02-02 17:22:51+0800)
+[11/06 16:52:25     16s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_3818781_ruby_salwan99_B7JN4D.
+
+[11/06 16:52:25     16s] Change the soft stacksize limit to 0.2%RAM (514 mbytes). Set global soft_stack_size_limit to change the value.
+[11/06 16:52:27     18s] 
+[11/06 16:52:27     18s] **INFO:  MMMC transition support version v31-84 
+[11/06 16:52:27     18s] 
+[11/06 16:52:27     18s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/06 16:52:27     18s] <CMD> suppressMessage ENCEXT-2799
+[11/06 16:52:27     18s] <CMD> getVersion
+[11/06 16:52:27     18s] <CMD> define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+		{-window "window coordinates" "" list optional}
+		{-window_size "window size in microns" "" string optional}
+	
+	}
+[11/06 16:52:28     18s] [INFO] Loading Pegasus 22.23 fill procedures
+[11/06 16:52:28     18s] <CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+[11/06 16:52:28     18s] <CMD> define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+[11/06 16:52:28     18s] <CMD> define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+[11/06 16:52:28     18s] <CMD> define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+[11/06 16:52:28     18s] <CMD> define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+[11/06 16:52:28     18s] <CMD> define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+[11/06 16:52:28     18s] <CMD> win
+[11/06 16:56:20     41s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Thu Nov  6 16:56:20 2025
+  Total CPU time:     0:00:41
+  Total real time:    0:04:19
+  Peak memory (main): 1038.45MB
+
+[11/06 16:56:20     41s] 
+[11/06 16:56:20     41s] *** Memory Usage v#1 (Current mem = 1093.926M, initial mem = 486.922M) ***
+[11/06 16:56:20     41s] *** Message Summary: 0 warning(s), 0 error(s)
+[11/06 16:56:20     41s] 
+[11/06 16:56:20     41s] --- Ending "Innovus" (totcpu=0:00:41.4, real=0:04:14, mem=1093.9M) ---

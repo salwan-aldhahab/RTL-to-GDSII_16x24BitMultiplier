@@ -1,0 +1,109 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version 6.1.8-64b 05/03/2023 09:40 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.32 
+Started at: 06-Nov-2025  17:52:00
+User Name : salwan99
+Host Name : ruby
+Directory : /eecs/home/salwan99/Desktop/VLSI4612/project3/RTL-to-GDSII_16x24BitMultiplier/PnR
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-75): Target library '16x24BitMultiplier_PnR' is attached to the technology library 'gpdk045'. Therefore, the technology file is opened in read-only mode. All the undefined layer-purpose pairs will be dropped.
+WARNING (XSTRM-107): Existing cells in the target library will be overwritten if the cell names in the Stream file and the target library are the same. To prevent this, set the '-writeMode' option to 'noOverwrite'.
+INFO (XSTRM-217): Reading the layer map file, /CMC/kits/cadence/GPDK045/gpdk045_v_6_0/gpdk045/gpdk045.layermap
+INFO (XSTRM-163): You have not used the '-viaMap' option. If a viaMap file, corresponding technology file or technology library exist, then use the '-viaMap' option for creating oaVia instances in the Streamed-In library. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options:
+	library				16x24BitMultiplier_PnR
+	strmFile			/eecs/home/salwan99/Desktop/VLSI4612/project3/RTL-to-GDSII_16x24BitMultiplier/PnR/gds/mult_unsigned.gds
+	logFile				strmIn.log
+	view				layout
+	case				Preserve
+	layerMap			/CMC/kits/cadence/GPDK045/gpdk045_v_6_0/gpdk045/gpdk045.layermap
+	propSeparator			,
+
+INFO (XSTRM-220): 1. Translating STRUCTURE BUFX2 as cellView 16x24BitMultiplier_PnR/BUFX2/layout.
+INFO (XSTRM-220): 2. Translating STRUCTURE INVX1 as cellView 16x24BitMultiplier_PnR/INVX1/layout.
+INFO (XSTRM-220): 3. Translating STRUCTURE INVX2 as cellView 16x24BitMultiplier_PnR/INVX2/layout.
+INFO (XSTRM-220): 4. Translating STRUCTURE BUFX3 as cellView 16x24BitMultiplier_PnR/BUFX3/layout.
+INFO (XSTRM-220): 5. Translating STRUCTURE CLKBUFX2 as cellView 16x24BitMultiplier_PnR/CLKBUFX2/layout.
+INFO (XSTRM-220): 6. Translating STRUCTURE INVX3 as cellView 16x24BitMultiplier_PnR/INVX3/layout.
+INFO (XSTRM-220): 7. Translating STRUCTURE INVXL as cellView 16x24BitMultiplier_PnR/INVXL/layout.
+INFO (XSTRM-220): 8. Translating STRUCTURE BUFX4 as cellView 16x24BitMultiplier_PnR/BUFX4/layout.
+INFO (XSTRM-220): 9. Translating STRUCTURE CLKBUFX6 as cellView 16x24BitMultiplier_PnR/CLKBUFX6/layout.
+INFO (XSTRM-220): 10. Translating STRUCTURE CLKBUFX3 as cellView 16x24BitMultiplier_PnR/CLKBUFX3/layout.
+INFO (XSTRM-220): 11. Translating STRUCTURE CLKBUFX4 as cellView 16x24BitMultiplier_PnR/CLKBUFX4/layout.
+INFO (XSTRM-220): 12. Translating STRUCTURE INVX20 as cellView 16x24BitMultiplier_PnR/INVX20/layout.
+INFO (XSTRM-220): 13. Translating STRUCTURE DFFRX1 as cellView 16x24BitMultiplier_PnR/DFFRX1/layout.
+INFO (XSTRM-220): 14. Translating STRUCTURE DFFQXL as cellView 16x24BitMultiplier_PnR/DFFQXL/layout.
+INFO (XSTRM-220): 15. Translating STRUCTURE DFFHQX1 as cellView 16x24BitMultiplier_PnR/DFFHQX1/layout.
+INFO (XSTRM-220): 16. Translating STRUCTURE DFFQX2 as cellView 16x24BitMultiplier_PnR/DFFQX2/layout.
+INFO (XSTRM-220): 17. Translating STRUCTURE XNOR2X1 as cellView 16x24BitMultiplier_PnR/XNOR2X1/layout.
+INFO (XSTRM-220): 18. Translating STRUCTURE ADDFX1 as cellView 16x24BitMultiplier_PnR/ADDFX1/layout.
+INFO (XSTRM-220): 19. Translating STRUCTURE OAI21X1 as cellView 16x24BitMultiplier_PnR/OAI21X1/layout.
+INFO (XSTRM-220): 20. Translating STRUCTURE OAI221X2 as cellView 16x24BitMultiplier_PnR/OAI221X2/layout.
+INFO (XSTRM-220): 21. Translating STRUCTURE AOI2BB1X1 as cellView 16x24BitMultiplier_PnR/AOI2BB1X1/layout.
+INFO (XSTRM-220): 22. Translating STRUCTURE AOI211XL as cellView 16x24BitMultiplier_PnR/AOI211XL/layout.
+INFO (XSTRM-220): 23. Translating STRUCTURE NAND2X1 as cellView 16x24BitMultiplier_PnR/NAND2X1/layout.
+INFO (XSTRM-220): 24. Translating STRUCTURE NOR4X1 as cellView 16x24BitMultiplier_PnR/NOR4X1/layout.
+INFO (XSTRM-220): 25. Translating STRUCTURE NAND2BX1 as cellView 16x24BitMultiplier_PnR/NAND2BX1/layout.
+INFO (XSTRM-220): 26. Translating STRUCTURE AOI21X1 as cellView 16x24BitMultiplier_PnR/AOI21X1/layout.
+INFO (XSTRM-220): 27. Translating STRUCTURE OAI211X1 as cellView 16x24BitMultiplier_PnR/OAI211X1/layout.
+INFO (XSTRM-220): 28. Translating STRUCTURE NOR2BX1 as cellView 16x24BitMultiplier_PnR/NOR2BX1/layout.
+INFO (XSTRM-220): 29. Translating STRUCTURE NAND3BXL as cellView 16x24BitMultiplier_PnR/NAND3BXL/layout.
+INFO (XSTRM-220): 30. Translating STRUCTURE MXI2XL as cellView 16x24BitMultiplier_PnR/MXI2XL/layout.
+INFO (XSTRM-220): 31. Translating STRUCTURE NOR2X1 as cellView 16x24BitMultiplier_PnR/NOR2X1/layout.
+INFO (XSTRM-220): 32. Translating STRUCTURE AOI31X1 as cellView 16x24BitMultiplier_PnR/AOI31X1/layout.
+INFO (XSTRM-220): 33. Translating STRUCTURE OA21X1 as cellView 16x24BitMultiplier_PnR/OA21X1/layout.
+INFO (XSTRM-220): 34. Translating STRUCTURE AOI2BB1XL as cellView 16x24BitMultiplier_PnR/AOI2BB1XL/layout.
+INFO (XSTRM-220): 35. Translating STRUCTURE OAI2BB1X1 as cellView 16x24BitMultiplier_PnR/OAI2BB1X1/layout.
+INFO (XSTRM-220): 36. Translating STRUCTURE NOR2XL as cellView 16x24BitMultiplier_PnR/NOR2XL/layout.
+INFO (XSTRM-220): 37. Translating STRUCTURE AND2X1 as cellView 16x24BitMultiplier_PnR/AND2X1/layout.
+INFO (XSTRM-220): 38. Translating STRUCTURE OR2XL as cellView 16x24BitMultiplier_PnR/OR2XL/layout.
+INFO (XSTRM-220): 39. Translating STRUCTURE NOR2BX2 as cellView 16x24BitMultiplier_PnR/NOR2BX2/layout.
+INFO (XSTRM-220): 40. Translating STRUCTURE OAI22X1 as cellView 16x24BitMultiplier_PnR/OAI22X1/layout.
+INFO (XSTRM-220): 41. Translating STRUCTURE AOI22X1 as cellView 16x24BitMultiplier_PnR/AOI22X1/layout.
+INFO (XSTRM-220): 42. Translating STRUCTURE OAI21X2 as cellView 16x24BitMultiplier_PnR/OAI21X2/layout.
+INFO (XSTRM-220): 43. Translating STRUCTURE OAI22X2 as cellView 16x24BitMultiplier_PnR/OAI22X2/layout.
+INFO (XSTRM-220): 44. Translating STRUCTURE OAI22XL as cellView 16x24BitMultiplier_PnR/OAI22XL/layout.
+INFO (XSTRM-220): 45. Translating STRUCTURE AOI22XL as cellView 16x24BitMultiplier_PnR/AOI22XL/layout.
+INFO (XSTRM-220): 46. Translating STRUCTURE AO22XL as cellView 16x24BitMultiplier_PnR/AO22XL/layout.
+INFO (XSTRM-220): 47. Translating STRUCTURE OR2X2 as cellView 16x24BitMultiplier_PnR/OR2X2/layout.
+INFO (XSTRM-220): 48. Translating STRUCTURE OR2X4 as cellView 16x24BitMultiplier_PnR/OR2X4/layout.
+INFO (XSTRM-220): 49. Translating STRUCTURE OR2X1 as cellView 16x24BitMultiplier_PnR/OR2X1/layout.
+INFO (XSTRM-220): 50. Translating STRUCTURE MX2XL as cellView 16x24BitMultiplier_PnR/MX2XL/layout.
+INFO (XSTRM-220): 51. Translating STRUCTURE MX2X1 as cellView 16x24BitMultiplier_PnR/MX2X1/layout.
+INFO (XSTRM-220): 52. Translating STRUCTURE XNOR2X4 as cellView 16x24BitMultiplier_PnR/XNOR2X4/layout.
+INFO (XSTRM-220): 53. Translating STRUCTURE NAND2XL as cellView 16x24BitMultiplier_PnR/NAND2XL/layout.
+INFO (XSTRM-220): 54. Translating STRUCTURE CLKINVX6 as cellView 16x24BitMultiplier_PnR/CLKINVX6/layout.
+INFO (XSTRM-220): 55. Translating STRUCTURE CLKINVX4 as cellView 16x24BitMultiplier_PnR/CLKINVX4/layout.
+INFO (XSTRM-220): 56. Translating STRUCTURE DFFX1 as cellView 16x24BitMultiplier_PnR/DFFX1/layout.
+INFO (XSTRM-220): 57. Translating STRUCTURE FILL1 as cellView 16x24BitMultiplier_PnR/FILL1/layout.
+INFO (XSTRM-220): 58. Translating STRUCTURE FILL4 as cellView 16x24BitMultiplier_PnR/FILL4/layout.
+INFO (XSTRM-220): 59. Translating STRUCTURE FILL2 as cellView 16x24BitMultiplier_PnR/FILL2/layout.
+INFO (XSTRM-220): 60. Translating STRUCTURE FILL8 as cellView 16x24BitMultiplier_PnR/FILL8/layout.
+INFO (XSTRM-220): 61. Translating STRUCTURE FILL16 as cellView 16x24BitMultiplier_PnR/FILL16/layout.
+INFO (XSTRM-220): 62. Translating STRUCTURE FILL32 as cellView 16x24BitMultiplier_PnR/FILL32/layout.
+INFO (XSTRM-220): 63. Translating STRUCTURE FILL64 as cellView 16x24BitMultiplier_PnR/FILL64/layout.
+INFO (XSTRM-220): 64. Translating STRUCTURE mult_unsigned as cellView 16x24BitMultiplier_PnR/mult_unsigned/layout.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '59:0' are ignored. This is because the stream layer-datatype pair is either not specified in the layer map file or the entry is invalid and was therefore ignored. Specify the stream layer-datatype pair in the layer map file or correct the wrong entry and try again.
+
+Summary of Objects Translated:
+	Instances:                              2427
+	CustomVias:                             0
+	StandardVias:                           9363
+	CdsGenVias:                             0
+	Arrays:                                 0
+	Polygons:                               569
+	Paths:                                  11796
+	PathSegs:                               0
+	Rectangles:                             4872
+	Text:                                   789
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  64
+
+Elapsed Time: 0.7s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 14116KB  CPUs Used: 2
+INFO (XSTRM-234): Translation completed. '0' error(s) and '3' warning(s) found.

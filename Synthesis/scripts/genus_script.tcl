@@ -18,8 +18,8 @@ set_db init_lib_search_path "$GPDK45_DIR/timing"
 # If your design has several HDL files, you have to put them all here.
 # Example:  set rtlFiles [list ../../RTL/src/top.v ../../src/module1.v ../../src/module.v]
 
-set rtlFiles [list ../RTL/src/counter.v]  ;# List of your Verilog source files
-set topModule counter                        ;# Name of your top-level module (here counter.v)
+set rtlFiles [list ../RTL/src/mult_unsigned.v]  ;# List of your Verilog source files
+set topModule mult_unsigned                        ;# Name of your top-level module (here counter.v)
 
 # --- Synthesis Run Settings ---
 set runName genus_$topModule                 ;# Base name for output files

@@ -1,0 +1,239 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Nov  6 17:04:15 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+		{-window "window coordinates" "" list optional}
+		{-window_size "window size in microns" "" string optional}
+	
+	}
+define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+win
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set _timing_save_restore_compression_mode hybrid
+set conf_qxconf_file NULL
+set conf_qxlib_file NULL
+set defHierChar /
+set distributed_client_message_echo 1
+set distributed_mmmc_disable_reports_auto_redirection 0
+set gpsPrivate::dpgNewAddBufsDBUpdate 1
+set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+set init_lef_file {
+    "/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef"
+    "/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef"
+}
+set init_verilog ../Synthesis/netlist/genus_mult_unsigned.v
+set init_top_cell mult_unsigned
+set init_mmmc_file ./scripts/mmmc.view
+set init_pwr_net VDD
+set init_gnd_net VSS
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set latch_time_borrow_mode max_borrow
+set pegDefaultResScaleFactor 1.000000
+set pegDetailResScaleFactor 1.000000
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set report_inactive_arcs_format {from to when arc_type sense reason}
+set timing_library_float_precision_tol 0.000010
+set timing_library_load_pin_cap_indices {}
+set timing_library_write_library_to_directory {}
+set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+init_design
+zoomBox -45.89200 -2.37700 91.58850 53.34250
+zoomBox -36.21200 -1.50550 63.11900 38.75250
+zoomBox -31.93900 -1.11150 52.49300 33.10800
+zoomBox -25.19850 -0.47150 35.80450 24.25250
+zoomBox -22.52500 -0.20750 29.32800 20.80800
+zoomBox -4.77500 1.02750 -0.92350 2.58850
+zoomBox -3.85700 1.08500 -2.14700 1.77800
+zoomBox -3.98650 1.07650 -1.97450 1.89200
+zoomBox -4.54700 1.02800 -1.27000 2.35600
+zoomBox -5.89250 0.89500 0.38700 3.44000
+zoomBox -8.72500 0.44200 1.49950 4.58600
+zoomBox -11.54550 -0.00950 2.60750 5.72650
+zoomBox -13.33900 -0.29650 3.31200 6.45200
+zoomBox -17.93100 -1.03100 5.11550 8.30950
+zoomBox -45.25850 -5.40300 15.84900 19.36350
+zoomBox -24.07750 -3.34800 7.82200 9.58050
+zoomBox -17.59850 -2.75650 5.44900 6.58450
+zoomBox -15.05050 -2.53400 4.54050 5.40600
+zoomBox -11.04300 -2.18450 3.11200 3.55250
+zoomBox -9.47300 -2.04800 2.55900 2.82850
+zoomBox -2.62700 -1.04250 0.65350 0.28700
+zoomBox -2.24200 -0.97450 0.54650 0.15550
+zoomBox -0.83600 -0.46900 0.21650 -0.04250
+zoomBox -0.97900 -0.53200 0.25900 -0.03000
+zoomBox -1.57800 -0.78450 0.43950 0.03300
+zoomBox -1.34550 -0.68650 0.36950 0.00850
+zoomBox -1.85250 -0.89700 0.52250 0.06550
+pan 0.36800 1.39100
+zoomBox -1.28100 -0.39950 0.73800 0.41900
+zoomBox -1.10800 -0.34500 0.60950 0.35100
+zoomBox -0.82550 -0.25150 0.41550 0.25150
+zoomBox -0.71500 -0.21450 0.34000 0.21300
+zoomBox -0.32450 -0.08350 0.07400 0.07800
+zoomBox -0.25900 -0.06200 0.02950 0.05500
+zoomBox -0.23450 -0.05350 0.01100 0.04600
+zoomBox -0.15100 -0.02450 -0.05600 0.01400
+zoomBox -0.18500 -0.03650 -0.02900 0.02650
+zoomBox -0.20050 -0.04250 -0.01650 0.03200
+zoomBox -0.29550 -0.07600 0.05850 0.06750
+zoomBox -0.33000 -0.08850 0.08650 0.08050
+zoomBox -0.42000 -0.12000 0.15750 0.11400
+zoomBox -0.54350 -0.16350 0.25650 0.16050
+zoomBox -0.71450 -0.22400 0.39350 0.22500
+zoomBox -0.95100 -0.30750 0.58300 0.31400
+zoomBox -3.22700 -1.11150 2.40700 1.17200
+zoomBox -6.09250 -2.12350 4.70350 2.25200
+fit
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.954137180185 0.699975 5 5 5 5
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal1 bottom Metal1 left Metal2 right Metal2} -width {top 1 bottom 1 left 1 right 1} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule LEFSpecialRouteSpec
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -modulePlan 1 -clkGateAware 0 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 1 -placeIOPins 1 -moduleAwareSpare 0 -checkPinLayerForAccess {  1 } -preserveRouting 0 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -fp false
+place_design
+create_ccopt_clock_tree_spec
+set_ccopt_property target_max_trans 0.5
+set_ccopt_property target_skew 0.05
+ccopt_design
+setNanoRouteMode -quiet -routeTopRoutingLayer 11
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+getFillerMode -quiet
+addFiller -cell FILL8 FILL64 FILL4 FILL32 FILL2 FILL16 FILL1 -prefix FILLER
+zoomBox 9.22550 23.41900 103.95350 61.81150
+zoomBox 17.41100 26.89650 97.93000 59.53000
+zoomBox 30.29600 32.36450 88.47100 55.94250
+zoomBox 39.66300 36.28600 81.69550 53.32150
+zoomBox 43.32100 37.81750 79.04950 52.29800
+zoomBox 46.46950 39.11950 76.83900 51.42800
+zoomBox 49.14550 40.22600 74.96000 50.68850
+zoomBox 54.99650 42.64550 70.85100 49.07100
+zoomBox 56.39350 43.22300 69.87000 48.68500
+zoomBox 57.58050 43.71400 69.03650 48.35700
+zoomBox 58.59000 44.13150 68.32750 48.07800
+zoomBox 59.44800 44.48650 67.72500 47.84100
+zoomBox 60.79750 45.04450 66.77750 47.46800
+zoomBox 61.32450 45.26250 66.40750 47.32250
+zoomBox 60.79750 45.04450 66.77750 47.46800
+zoomBox 61.32450 45.26250 66.40750 47.32250
+zoomBox 62.15300 45.60500 65.82550 47.09350
+zoomBox 61.77200 45.44750 66.09350 47.19900
+zoomBox 60.79650 45.04400 66.77850 47.46850
+zoomBox 60.17600 44.78750 67.21400 47.64000
+zoomBox 59.44600 44.48550 67.72650 47.84150
+zoomBox 58.58700 44.13050 68.32950 48.07900
+zoomBox 57.57700 43.71250 69.03850 48.35800
+zoomBox 54.98950 42.64300 70.85450 49.07300
+zoomBox 53.34450 41.96250 72.00950 49.52750
+zoomBox 51.40850 41.16250 73.36800 50.06250
+zoomBox 49.13200 40.22100 74.96650 50.69150
+zoomBox 45.89950 38.95150 76.29350 51.27000
+zoomBox 37.62250 35.70100 79.69100 52.75100
+zoomBox 32.35900 33.63400 81.85200 53.69300
+zoomBox 18.88100 28.34100 87.38500 56.10500
+zoomBox -11.63550 16.35700 99.91250 61.56650
+zoomBox -42.01000 4.42900 112.38150 67.00250
+zoomBox -61.32600 -3.15650 120.31100 70.45950
+zoomBox -84.05050 -12.08050 129.64000 74.52650
+fit
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net true -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report mult_unsigned.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -type all -error 1000 -warning 50
+streamOut gds/mult_unsigned.gds -mapFile scripts/gpdk045.map -libName DesignLib -merge { scripts/gsclib045.gds } -units 2000 -mode ALL

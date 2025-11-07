@@ -1,0 +1,3 @@
+INCLUDE tech.lib
+DEFINE 16x24BitMultiplier_PnR /eecs/home/salwan99/Desktop/VLSI4612/project3/RTL-to-GDSII_16x24BitMultiplier/PnR/16x24BitMultiplier_PnR
+DEFINE avTech /CMC/tools/cadence/ASSURA04.16.111-618_lnx86/tools.lnx86/assura/etc/avtech/avTech

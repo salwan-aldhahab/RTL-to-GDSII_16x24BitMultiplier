@@ -11,8 +11,8 @@ set layer_map_file "/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/oa22/
 set gds_files "/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/gds/gsclib045.gds"
 
 # Set Verilog and SDC files
-set verilog_file "$netlist_dir/genus_counter.v"
-set sdc_file "$netlist_dir/genus_counter.sdc"
+set verilog_file "$netlist_dir/genus_mult_unsigned.v"
+set sdc_file "$netlist_dir/genus_mult_unsigned.sdc"
 
 set ::TimeLib::tsgMarkCellLatchConstructFlag 1
 set _timing_save_restore_compression_mode hybrid
@@ -32,9 +32,9 @@ set init_lef_file {
 }
 
 # Initialize the Verilog file
-set init_verilog "$netlist_dir/genus_counter.v"
+set init_verilog "$netlist_dir/genus_mult_unsigned.v"
 
-set init_top_cell counter
+set init_top_cell mult_unsigned
 #init_remove_assigns true
 
 # Set IO file 

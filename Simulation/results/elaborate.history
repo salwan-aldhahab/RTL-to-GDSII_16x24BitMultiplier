@@ -1,0 +1,4 @@
+s1(05Nov2025:17:54:10):  xrun -64bit -v93 -relax -access +rwc -compile -f filelist.f -logfile .//results/compile.log 
+s2(05Nov2025:17:54:10):  xrun -64bit -v93 -relax -access +rwc -elaborate -top counter_tb -cdslib cds.lib -logfile .//results/elaborate.log 
+s3(06Nov2025:14:58:08):  xrun -64bit -v93 -relax -access +rwc -compile -f filelist.f -logfile .//results/compile.log 
+s4(06Nov2025:14:58:08):  xrun -64bit -v93 -relax -access +rwc -elaborate -top mult_unsigned_tb -cdslib cds.lib -logfile .//results/elaborate.log 

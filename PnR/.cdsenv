@@ -1,0 +1,6 @@
+license VLSL_UseNextLicense     string  "always"
+license VLSXL_UseNextLicense    string  "always"
+license ADEL_UseNextLicense     string  "always"
+license VSEL_UseNextLicense     string  "always"
+
+ddserv	showWhatsNew	string	"6.1.8"
