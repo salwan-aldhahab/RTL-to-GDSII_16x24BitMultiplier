@@ -9,10 +9,10 @@ The design is implemented using **GPDK45nm** (Generic Process Design Kit for 45n
 ## Features
 
 - **16×24-bit unsigned multiplier** with pipelined architecture
-- **4-stage pipeline**: 
-  - 1 cycle for input operand registration
-  - 1 cycle for multiplication
-  - 3 cycles for output pipeline stages
+- **5-stage pipeline with 4 cycles total latency**: 
+  - Stage 1: Input operand registration (rA, rB)
+  - Stage 2: Multiplication (M[0] = rA * rB)
+  - Stages 3-5: Output pipeline registers (M[1], M[2], M[3])
 - Fully synthesizable Verilog RTL design
 - Comprehensive testbench with multiple test cases
 - Complete synthesis flow using Cadence Genus
@@ -76,7 +76,8 @@ The design uses the GPDK45nm standard cell library:
 - **WIDTHB**: 24 bits (second operand)
 - **Output Width**: 40 bits (WIDTHA + WIDTHB)
 - **Clock Frequency**: 150 MHz (target)
-- **Pipeline Depth**: 4 stages (total latency)
+- **Pipeline Stages**: 5 stages (rA/rB, M[0], M[1], M[2], M[3])
+- **Total Latency**: 4 clock cycles
 
 ### Timing Constraints
 
@@ -148,11 +149,13 @@ PnR outputs:
 
 ### Architecture
 
-The multiplier implements a **pipelined architecture** to achieve high throughput:
+The multiplier implements a **5-stage pipelined architecture** to achieve high throughput:
 
-1. **Stage 0** (Cycle 1): Input operands A and B are registered
-2. **Stage 1** (Cycle 2): Multiplication is performed (rA * rB)
-3. **Stages 2-4** (Cycles 3-5): Results propagate through output pipeline
+1. **Stage 1** (Cycle 1): Input operands A and B are registered into rA and rB
+2. **Stage 2** (Cycle 2): Multiplication is performed (M[0] = rA * rB)
+3. **Stages 3-5** (Cycles 3-5): Results propagate through output pipeline (M[1] -> M[2] -> M[3])
+
+**Total Latency**: 4 clock cycles from input to output
 
 This pipelining approach allows for:
 - One multiplication result every clock cycle (after initial latency)
